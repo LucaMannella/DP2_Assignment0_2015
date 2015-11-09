@@ -38,18 +38,27 @@ public class Main1 {
 			fpin2.close();
 			fRead2.close();
 		}
-		catch (FileNotFoundException e) {
-			System.err.println("Impossible to open the file! "+e.getMessage());
+		catch (ArrayIndexOutOfBoundsException e) {
+			System.err.println("Something wrong on the parameters of the command line! "+e.getMessage()+"\n");
 			e.printStackTrace();
+			return;
+		}
+		catch (FileNotFoundException e) {
+			System.err.println("Impossible to open the file! "+e.getMessage()+"\n");
+			e.printStackTrace();
+			return;
 		} 
 		catch (IOException e) {
-			System.err.println("Error during I/O operation! "+e.getMessage());
+			System.err.println("Error during I/O operation! "+e.getMessage()+"\n");
 			e.printStackTrace();
 		}
 		catch (Exception e) {
-			System.err.println("Unpredicted Exception! "+e.getMessage());
+			System.err.println("Unpredicted Exception! "+e.getMessage()+"\n");
 			e.printStackTrace();
+			return;
 		}
+		
+		System.out.println("\n"+"Operation completed!"+"\n");
 	}
 
 }
