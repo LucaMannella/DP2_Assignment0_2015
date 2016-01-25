@@ -15,6 +15,7 @@ hs_err_pid*
 # Eclipse Environment files
 .classpath
 .project
+.settings/
 
 #output files
 output*.txt
