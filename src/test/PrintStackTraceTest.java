@@ -2,6 +2,11 @@ package test;
 
 public class PrintStackTraceTest {
 
+	@SuppressWarnings("null")
+	/**
+	 * This main will test the PrintStackTrace method using a NullPointerException.
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		System.out.println("...Start main...");
 		
