@@ -1,8 +1,7 @@
-Ciao
-io sono l'idraulico e 
+Ciao io sono un file di test! 
 This is a String
-mi piacciono le
-Banana
-non sopporto
+mi piacciono i treni
+this is a no-sense phrase
+non sopporto 
 Francesco Menchetti
-The evil Malfatto has a Sternocleidomastoid
+Sternocleidomastoideo
