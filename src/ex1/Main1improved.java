@@ -13,19 +13,24 @@ import java.util.StringTokenizer;
 
 public class Main1improved {
 
-	/** A simple main that read a file given as parameter and prints on the screen 
-	 * the lines that not occurs in the file "dictionary.txt". 
-	 * 
+	/** A simple main that read a file given as parameter and prints on the screen
+	 * the lines that not occurs in the file "dictionary.txt".
+	 *
 	 * In this exercise the file "dictionary.txt" must has just one word for each line
 	 * and the program is able to find that words in the strings of the file given as
 	 * command line parameter.
-	 **/ 
+	 **/
 	public static void main(String[] args) {
 		int i=1;
 		String buffer, token;
-		StringTokenizer st;
+		StringTokenizer st;	
 		Set<String> dictionary = new HashSet<String>();
-		
+
+		if(args.length < 1) {
+			System.out.println("Something wrong on the parameters on the command line!");
+			return;
+		}
+			
 		try {
 			//Buffer Reader + File Reader for reading Strings from a file.
 			BufferedReader fpin1 = new BufferedReader(new FileReader("./dictionary2.txt"));
@@ -64,7 +69,7 @@ public class Main1improved {
 				} catch (NoSuchElementException e) {
 					System.err.println("Error with String Tokenizer in line "+i+" of the file");
 				} catch (IOException e) {
-					System.err.println("Reading error in line "+i+" of the file");				
+					System.err.println("Reading error in line "+i+" of the file");
 				}
 			}
 			fpin2.close();	//this function should close also the inner buffer 
